@@ -10,7 +10,7 @@ class Instagram extends StatefulWidget {
 }
 
 class _InstagramState extends State<Instagram> {
-  late int active;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -144,13 +144,8 @@ class _InstagramState extends State<Instagram> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: active,
-        onTap: ((value) {
-          active=value;
-          setState(() {
-            
-          });
-        }),
+        currentIndex: 0,
+        
         items: const [
         BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
         BottomNavigationBarItem(icon: Icon(Icons.search), label: "search"),
