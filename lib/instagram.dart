@@ -10,6 +10,15 @@ class Instagram extends StatefulWidget {
 }
 
 class _InstagramState extends State<Instagram> {
+  late int activpage;
+  @override
+  void initState() {
+    activpage=0;
+    setState(() {
+      
+    });
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -144,7 +153,10 @@ class _InstagramState extends State<Instagram> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0,
+        currentIndex:activpage,
+        onTap: ((value) {
+          activpage=value;
+        }),
         
         items: const [
         BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
